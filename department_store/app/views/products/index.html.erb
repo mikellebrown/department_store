@@ -1,0 +1,9 @@
+<h1>Click a Product To Learn More</h1>
+<%= link_to 'Create a new Product', new_department_product_path(@department) %>
+
+
+<ul>
+  <% @products.each do |product| %>
+    <li><%= link_to "#{product.product_name}", department_product_path(@department, product) %></li>
+  <% end %>
+</ul>
